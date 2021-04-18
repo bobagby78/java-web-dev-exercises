@@ -17,7 +17,7 @@ public class Alice {
         if (alice.toLowerCase().contains(searchTerm)){
             System.out.print("The first occurence of that term is at index " + alice.indexOf(searchTerm) + ". ");
             String searchTermRemovedStart = alice.substring(0,alice.indexOf(searchTerm)) + "*HERE IT WAS*";
-            String searchTermRemovedEnd = alice.substring(alice.indexOf(searchTerm) + searchTerm.length(), alice.length());
+            String searchTermRemovedEnd = alice.substring(alice.indexOf(searchTerm) + searchTerm.length());
             System.out.println(searchTermRemovedStart + searchTermRemovedEnd);
         }else{
             System.out.println("That term is not in this part of the text.");
