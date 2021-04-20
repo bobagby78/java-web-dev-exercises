@@ -10,7 +10,7 @@ public class Area {
         System.out.println("Rounded to one decimal place (EX: 4.2), what is the radius of the circle?: ");
         radius = input.nextDouble();
         input.close();
-        Double area = Circle.getArea(radius);
+        double area = Circle.getArea(radius);
         System.out.println("The area of a circle with a radius of " + radius + " is " + area);
     }
 
