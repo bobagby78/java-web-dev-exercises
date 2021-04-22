@@ -1,0 +1,9 @@
+package org.launchcode.java.demos.lsn2controlflowandcollections;
+
+public class ForLoopExample {
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i ++){
+            System.out.println(i);
+        }
+    }
+}
