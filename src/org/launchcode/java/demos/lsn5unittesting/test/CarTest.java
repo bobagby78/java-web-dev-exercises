@@ -1,8 +1,8 @@
 package org.launchcode.java.demos.lsn5unittesting.test;
 
 import org.junit.Test;
-import org.junit.Assert.assertEquals;
-
+import static org.junit.Assert.assertEquals;
+import org.launchcode.java.demos.lsn5unittesting.main.Car;
 
 public class CarTest {
 
@@ -12,6 +12,10 @@ public class CarTest {
         assertEquals(10, 10, .001);
     }
     //TODO: constructor sets gasTankLevel properly
+    public void testInitialGasTank(){
+        Car test_car = new Car("Toyota", "Prius", 10, 50);
+        assertEquals(10, test_car.getGasTankLevel(), .001);
+    }
 
     //TODO: gasTankLevel is accurate after driving within tank range
 
