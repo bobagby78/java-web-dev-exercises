@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class MilesPerGallon {
     public static void main(String[] args){
         Scanner input= new Scanner(System.in);
-        float miles;
-        float gallons;
+        double miles;
+        double gallons;
 
         System.out.println("How many miles have you driven? ");
         miles = input.nextFloat();
@@ -14,7 +14,7 @@ public class MilesPerGallon {
         gallons = input.nextFloat();
         input.close();
 
-        float mileage = miles/gallons;
+        double mileage = miles/gallons;
         System.out.println("Your current gas mileage is " + mileage + " miles per gallon");
     }
 
