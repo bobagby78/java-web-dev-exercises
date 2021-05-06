@@ -84,5 +84,8 @@ public class Car {
         this.gasTankLevel = this.gasTankLevel - gallonsUsed;
         this.odometer += milesAbleToTravel;
     }
+    public void addGas(double gasToAdd){
+        this.setGasTankLevel(gasToAdd + this.getGasTankLevel());
+    }
 
 }
