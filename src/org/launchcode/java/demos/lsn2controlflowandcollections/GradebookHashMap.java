@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class HashMapGradebook {
+public class GradebookHashMap {
 
     public static void main(String[] args) {
 
@@ -35,7 +35,7 @@ public class HashMapGradebook {
         System.out.println("\nClass roster:");
         double sum = 0.0;
 
-        for (Map.Entry<String, Double> student : students.entrySet()) {
+        for (Map.Entry<String, Double> student : students.entrySet()) { //Map.Entry allows us to reach into the Map and get data out of it (?)
             System.out.println(student.getKey() + " (" + student.getValue() + ")");
             sum += student.getValue();
         }
