@@ -13,10 +13,16 @@ public class CharCount {
 
         char[] hiddenFigsCharacters = hiddenFigs.toCharArray();
         for (char character : hiddenFigsCharacters){
-            if (!characterCounter.containsKey(character)) //change this to add 1 to the character count first, then add to the characters as the else statement if it doesn't exist yet
+            if (characterCounter.containsKey(character)){
+                characterCounter.put(character, characterCounter.get(character) + 1);
+            }else{
                 characterCounter.put(character, 1);
-                System.out.println(characterCounter);
+            }
 
+
+        }
+        for (Map.Entry<Character, Integer> aCharacter : characterCounter.entrySet()){
+            System.out.println(aCharacter.getKey() + " : " + aCharacter.getValue());
         }
     }
 }
