@@ -1,6 +1,7 @@
 package org.launchcode.java.demos.lsn6inheritance;
 
-public class Cat {
+//public class Cat{
+public abstract class Cat {
 
     private boolean tired = false;
     private boolean hungry = false;
@@ -62,7 +63,9 @@ public class Cat {
         hungry = false;
     }
 
-    public String noise () {
+    public String noise() {
         return "Meeeeeeooooowww!";
     }
+    //public abstract String noise(); //this is an abstract method, no associated code, it just forces the same method on other classses that extend it
+    public String purr () {return "Not all cats purr";}
 }

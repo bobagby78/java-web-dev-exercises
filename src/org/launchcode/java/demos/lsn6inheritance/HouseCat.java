@@ -17,8 +17,8 @@ public class HouseCat extends Cat {
     public String noise() {
         return "Hello, my name is " + name + "!";
     }
-
+    @Override
     public String purr() {
-        return "I'm a HouseCat";
+        return "I'm a HouseCat, so I do purr";
     }
 }

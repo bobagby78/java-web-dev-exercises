@@ -2,10 +2,10 @@ package org.launchcode.java.demos.lsn6inheritance;
 
 public class Jaguar extends Cat {
     private String name;
-    private String species = "Felis catus";
+    private String species = "Panthera onca";
 
     public Jaguar(String aName, double aWeight) {
-        super(aWeight);
+        super(aWeight); //Gots to be first in the fields since it's a super.
         name = aName;
     }
 
@@ -15,12 +15,14 @@ public class Jaguar extends Cat {
 
     @Override
     public String noise() {
-        return "Hello, my name is " + name + "!";
+        return "RRRRAAAAAWWWWWRRRRR";
     }
 
 //    public String purr() {
 //        return "I'm a HouseCat";
 //    }
+    @Override
+    public String purr() {return "Jaguars don't purr, they 'chuff'";}
 
-    public String chuff() {return "I grunt (chuff) instead of purring"}
+
 }

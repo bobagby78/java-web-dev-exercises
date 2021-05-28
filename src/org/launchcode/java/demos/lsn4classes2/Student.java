@@ -1,5 +1,9 @@
 package org.launchcode.java.demos.lsn4classes2;
 
+import org.w3c.dom.ls.LSOutput;
+
+import java.util.Objects;
+
 public class Student {
 
     private static int nextStudentId = 1;
@@ -55,8 +59,31 @@ public class Student {
     // TODO: Add your custom 'toString' method here. Make sure it returns a well-formatted String rather
     //  than just the class fields.
 
+    @Override
+    public String toString() {
+        return "\nStudent" +
+                "\nname=" + name +
+                "\nstudentId=" + studentId +
+                "\nnumberOfCredits=" + numberOfCredits +
+                "\ngpa=" + gpa + "\n";
+    }
+
     // TODO: Add your custom 'equals' method here. Consider which fields should match in order to call two
     //  Student objects equal.
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return studentId == student.studentId && name.equals(student.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, studentId);
+    }
 
     public String getName() {
         return name;
@@ -93,7 +120,6 @@ public class Student {
     public static void main(String[] args) {
         Student sally = new Student("Sally",1,1,4.0);
         System.out.println("The Student class works! " + sally.getName() + " is a student!");
-        System.out.println(sally);
         System.out.println(sally.getGradeLevel());
         System.out.println(sally.numberOfCredits);
         sally.addGrade(12, 3.5);
